@@ -21,32 +21,45 @@ const NavbarComponent = () => {
     navigate('/')
   }
 
+  const [show, setShow]=useState(false);
+
+
   return (
-    <Navbar className='navbar-dark bg-dark navbarComponent'  expand="lg">
+
+    <Navbar expanded={show}
+    className='navbar-dark bg-dark navbarComponent' expand="lg">
       <Container >
         <Link to='/'>
           <Navbar.Brand
-              onClick={()=>dispatch(filterCategory("all"))}
-
+            olClick={()=>dispatch(filterCategory("all"))}
            href="#">Al<span className='text-warning'>Ver</span></Navbar.Brand>
         </Link>
-        <Navbar.Toggle aria-controls="navbarScroll" />
-        <Navbar.Collapse id="navbarScroll">
-          <Nav
+        <Navbar.Toggle
+            onClick={()=>setShow(!show)}
+            aria-controls="navbarScroll" />
+        <Navbar.Collapse id="navbarScroll" >
+          <Nav 
             className="me-auto my-2 my-lg-0 "
-            navbarScroll
-          >
-            <NavLink className='nav-link' to='/' >
+            navbarScroll>
+            <NavLink 
+            onClick={()=>setShow(false)}
+            className='nav-link' to='/' >
                 Home
             </NavLink>
-            <NavLink className='nav-link' to='/cart' >
+            <NavLink 
+            onClick={()=>setShow(false)}
+            className='nav-link' to='/cart' >
                 Cart
             </NavLink>
-            <NavLink className='nav-link' to='/favorites' >
+            <NavLink 
+            onClick={()=>setShow(false)}
+            className='nav-link' to='/favorites' >
                 Favorites
             </NavLink>
             
-            <NavDropdown title="Categories" id="navbarScrollingDropdown">
+            <NavDropdown
+            onSelect={()=>setShow(false)}
+             title="Categories" id="navbarScrollingDropdown">
               <NavDropdown.Item 
               onClick={()=>dispatch(filterCategory("clothing"))}
               >
@@ -114,7 +127,9 @@ const NavbarComponent = () => {
               </NavDropdown.Item>
             </NavDropdown>
 
-            <NavLink className='nav-link' to='/about' >
+            <NavLink 
+            onClick={()=>setShow(false)}
+            className='nav-link' to='/about' >
                 About
             </NavLink>
             
