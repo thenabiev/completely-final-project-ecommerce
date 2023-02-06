@@ -31,7 +31,7 @@ const NavbarComponent = () => {
       <Container >
         <Link to='/'>
           <Navbar.Brand
-            olClick={()=>dispatch(filterCategory("all"))}
+            onClick={()=>dispatch(filterCategory("all"))}
            href="#">Al<span className='text-warning'>Ver</span></Navbar.Brand>
         </Link>
         <Navbar.Toggle

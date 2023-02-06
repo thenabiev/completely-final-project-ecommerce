@@ -19,4 +19,5 @@ Redux-Toolkit
 React-Icons
 React-Bootstrap
 
-
+## DEMO 
+Here is a working live demo : ("https://alver-eshop.netlify.app/")
