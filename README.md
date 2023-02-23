@@ -2,11 +2,11 @@
 Here is a working live demo : "https://e-alver.netlify.app/"
 
 ## Tools used in this project
-React JS
-React Router
-Redux-Toolkit
-React-Icons
-React-Bootstrap
+# React JS
+# React Router
+# Redux-Toolkit
+# React-Icons
+# React-Bootstrap
 
 
 ## Available Scripts
